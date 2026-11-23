@@ -16,8 +16,19 @@ const voterIdStorageKey = "birthday-invitation-voter-id";
 let hasSubmittedDish = localStorage.getItem(submissionStorageKey) === "submitted";
 let isSubmittingDish = false;
 let isStartingBackgroundMusic = false;
+const backgroundMusicStartTime = 3;
 const photoGroup = document.querySelector(".photo-number g");
 const photoSources = Array.from(photoGroup.querySelectorAll("image"), (image) => image.getAttribute("href"));
+
+function skipBackgroundMusicIntro() {
+    if (
+        Number.isFinite(backgroundMusic.duration)
+        && backgroundMusic.duration > backgroundMusicStartTime
+        && backgroundMusic.currentTime < backgroundMusicStartTime
+    ) {
+        backgroundMusic.currentTime = backgroundMusicStartTime;
+    }
+}
 
 function startBackgroundMusic() {
     if (isStartingBackgroundMusic || !backgroundMusic.paused) {
@@ -44,7 +55,16 @@ function startBackgroundMusic() {
         });
 }
 
+backgroundMusic.addEventListener("loadedmetadata", skipBackgroundMusicIntro);
+backgroundMusic.addEventListener("ended", () => {
+        backgroundMusic.currentTime = Number.isFinite(backgroundMusic.duration)
+            && backgroundMusic.duration > backgroundMusicStartTime
+            ? backgroundMusicStartTime
+            : 0;
+        startBackgroundMusic();
+});
 backgroundMusic.volume = 0.20;
+skipBackgroundMusicIntro();
 startBackgroundMusic();
 
 photoGroup.replaceChildren();
