@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5eee4">
+    <title>Una celebración muy especial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="invitation">
+        <section class="card-scene" aria-label="Invitación de cumpleaños">
+            <article class="inside" id="inside" aria-label="Interior de la invitación" inert>
+                <div class="inside-content">
+                    <section class="inside-page invitation-page" id="invitation-page" aria-label="La invitación" aria-describedby="invitation-hint" tabindex="0">
+                        <span class="inside-flourish" aria-hidden="true">❦</span>
+                        <p class="inside-message">
+                            El 19 de diciembre voy a celebrar mi 90 cumpleaños
+                            y me haría muchísima ilusión compartir ese día contigo.
+                        </p>
+                        <p class="inside-message">
+                            Me han organizado una comida en el restaurante
+                            La Cartelería (calle Velázquez Moreno, 41) a las 14:00 h.
+                            Yo llegaré un poco más tarde para llevarme la sorpresa,
+                            así que, por favor, ¡no llegues tarde!
+                        </p>
+                        <span class="page-turn-hint" id="invitation-hint">Toca la tarjeta para ver el menú</span>
+                        <button class="close-button" id="close-card" type="button">Cerrar invitación</button>
+                    </section>
+
+                    <section class="inside-page menu-page" id="menu-page" aria-labelledby="menu-title" aria-describedby="menu-hint" tabindex="0" aria-hidden="true" inert>
+                        <span class="inside-flourish" aria-hidden="true">❦</span>
+                        <p class="inside-kicker">La Cartelería</p>
+                        <h2 id="menu-title" tabindex="-1">El menú</h2>
+                        <div class="menu-course">
+                            <h3>Picoteo</h3>
+                            <p>Croquetas variadas · Empanada de atún · Zamburiñas a la plancha</p>
+                        </div>
+                        <form class="dish-form" id="dish-form">
+                            <fieldset class="dish-picker" aria-describedby="dish-feedback">
+                                <legend>Elige tu plato principal</legend>
+                                <label class="dish-option">
+                                    <input type="radio" name="main-dish" value="carrilleras">
+                                    <span>Carrilleras estofadas al Mencía con patatas fritas</span>
+                                </label>
+                                <label class="dish-option">
+                                    <input type="radio" name="main-dish" value="bacalao">
+                                    <span>Posta de bacalao al horno con patata panadera y verduras</span>
+                                </label>
+                            </fieldset>
+                            <p class="dish-feedback" id="dish-feedback" aria-live="polite">Selecciona tu plato principal.</p>
+                            <button class="submit-button" id="submit-dish" type="submit">Enviar mi elección</button>
+                        </form>
+                        <div class="menu-course menu-extras">
+                            <p><strong>Postre:</strong> tarta San Marcos · <strong>Café</strong></p>
+                        </div>
+                        <span class="page-turn-hint" id="menu-hint">Toca la tarjeta para volver</span>
+                    </section>
+                </div>
+            </article>
+
+            <button class="cover" id="open-card" type="button" aria-expanded="false" aria-controls="inside">
+                <span class="cover-ornament cover-ornament-top" aria-hidden="true">✳</span>
+                <span class="cover-caption">Elisa</span>
+                <svg class="photo-number" viewBox="0 0 680 350" role="img" aria-labelledby="number-title number-description">
+                    <title id="number-title">90</title>
+                    <desc id="number-description">El número noventa formado por fotografías familiares.</desc>
+                    <defs>
+                        <clipPath id="number-mask">
+                            <text x="340" y="310" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" font-size="350" font-weight="900" textLength="500" lengthAdjust="spacingAndGlyphs">90</text>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#number-mask)">
+                        <image href="img/IMG_20261122_175315.jpg" x="0" y="0" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175309.jpg" x="170" y="0" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175303.jpg" x="340" y="0" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175259.jpg" x="510" y="0" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175253.jpg" x="0" y="87.5" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175246.jpg" x="170" y="87.5" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261122_175239.jpg" x="340" y="87.5" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG_20261114_195006.jpg" x="510" y="87.5" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG-20261114-WA0007.jpg" x="0" y="175" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG-20261114-WA0006.jpg" x="170" y="175" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG-20261114-WA0005.jpg" x="340" y="175" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG-20261114-WA0004.jpg" x="510" y="175" width="170" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                        <image href="img/IMG-20261114-WA0003.jpg" x="0" y="262.5" width="680" height="87.5" preserveAspectRatio="xMidYMid meet" />
+                    </g>
+                </svg>
+                <span class="cover-rule" aria-hidden="true"></span>
+                <span class="cover-instruction">Toca para abrir</span>
+                <span class="cover-ornament cover-ornament-bottom" aria-hidden="true">❀</span>
+            </button>
+        </section>
+    </main>
+    <audio id="background-music" loop preload="auto" aria-hidden="true">
+        <source src="audio/F%C3%BCr%20Elise%20Performed%20by%20Lang%20Lang.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
