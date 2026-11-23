@@ -35,6 +35,7 @@ function startBackgroundMusic() {
         return;
     }
 
+    skipBackgroundMusicIntro();
     isStartingBackgroundMusic = true;
     backgroundMusic.play()
         .then(() => {
