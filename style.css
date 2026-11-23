@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Vina+Sans&display=swap");
 
 :root {
     color-scheme: light;
@@ -401,8 +401,8 @@ button {
 
 .photo-number {
     display: block;
-    width: 138%;
-    max-height: 60%;
+    width: 148%;
+    max-height: 65%;
     margin: 0 -2% -2%;
     overflow: visible;
 }

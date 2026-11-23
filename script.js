@@ -70,7 +70,10 @@ startBackgroundMusic();
 
 photoGroup.replaceChildren();
 const photoDefs = document.querySelector(".photo-number defs");
-photoGroup.insertAdjacentHTML("afterbegin", '<rect width="680" height="350" fill="#eee5d9" />');
+const photoTiles = document.createElementNS("http://www.w3.org/2000/svg", "g");
+photoTiles.setAttribute("transform", "translate(0 55)");
+photoTiles.insertAdjacentHTML("afterbegin", '<rect width="680" height="350" fill="#eee5d9" />');
+photoGroup.append(photoTiles);
 
 for (let index = 0; index < 18; index += 1) {
     const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
@@ -99,7 +102,7 @@ for (let index = 0; index < 18; index += 1) {
     image.setAttribute("height", String(tileHeight * scale));
     image.setAttribute("preserveAspectRatio", "xMidYMid slice");
     image.setAttribute("clip-path", `url(#${clipId})`);
-    photoGroup.append(image);
+    photoTiles.append(image);
 }
 
 function setCardOpen(isOpen) {
