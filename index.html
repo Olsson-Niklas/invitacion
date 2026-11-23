@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5eee4">
-    <title>Una celebración muy especial</title>
+    <title>Invitación para cumpleaños de Maria Elisa</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -25,8 +25,12 @@
                                 La Cartelería (calle Velázquez Moreno, 41) a las 14:00 h.
                                 Yo llegaré un poco más tarde para llevarme la sorpresa,
                                 así que, por favor, ¡no llegues tarde!
+                                <br>
+                                <br>
+
+                                Confírmame tu asistencia y elige tu plato principal antes del 8 de diciembre.
                             </p>
-                            <span class="page-turn-hint" id="invitation-hint">Toca la tarjeta para ver el menú</span>
+                            <span class="page-turn-hint" id="invitation-hint">Toca la tarjeta para ver el menú y confirmar</span>
                             <button class="close-button" id="close-card" type="button">Cerrar invitación</button>
                         </div>
                     </section>
@@ -41,6 +45,10 @@
                                 <p>Croquetas variadas · Empanada de atún · Zamburiñas a la plancha</p>
                             </div>
                             <form class="dish-form" id="dish-form">
+                                <div class="guest-name-field">
+                                    <label for="guest-name">Tu nombre</label>
+                                    <input id="guest-name" name="guestName" type="text" maxlength="100" autocomplete="name" required>
+                                </div>
                                 <fieldset class="dish-picker" aria-describedby="dish-feedback">
                                     <legend>Elige tu plato principal</legend>
                                     <label class="dish-option">

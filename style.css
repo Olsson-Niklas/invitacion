@@ -320,6 +320,36 @@ button {
     align-items: center;
 }
 
+.guest-name-field {
+    display: grid;
+    width: 100%;
+    gap: 4px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.guest-name-field label {
+    color: var(--gold);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0.82rem;
+}
+
+.guest-name-field input {
+    width: 100%;
+    padding: 5px 8px;
+    border: 1px solid rgb(196 164 113 / 65%);
+    border-radius: 3px;
+    color: var(--ink);
+    background: var(--paper);
+    font: inherit;
+    font-size: 0.75rem;
+}
+
+.guest-name-field input:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
 .dish-picker legend {
     width: 100%;
     margin-bottom: 5px;

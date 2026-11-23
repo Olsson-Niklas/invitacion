@@ -9,6 +9,7 @@ const menuTitle = document.querySelector("#menu-title");
 const dishFeedback = document.querySelector("#dish-feedback");
 const dishOptions = document.querySelectorAll('input[name="main-dish"]');
 const dishForm = document.querySelector("#dish-form");
+const guestNameInput = document.querySelector("#guest-name");
 const submitDishButton = document.querySelector("#submit-dish");
 const submissionEndpoint = "https://script.google.com/macros/s/AKfycbylv22R3F31yQnlDllRYIrlsG5yHehhl4GrlEJVNZU3-ABYSorwCThIJhZHLPeT6-f79w/exec";
 const submissionStorageKey = "birthday-invitation-dish-submitted";
@@ -159,6 +160,7 @@ function handlePageKeydown(event, page, turnPage) {
 
 function markDishSubmitted(message) {
     hasSubmittedDish = true;
+    guestNameInput.disabled = true;
     dishOptions.forEach((option) => {
         option.disabled = true;
     });
@@ -222,8 +224,17 @@ dishForm.addEventListener("submit", async (event) => {
         return;
     }
 
+    const guestName = guestNameInput.value.trim();
+
+    if (!guestName) {
+        dishFeedback.textContent = "Escribe tu nombre antes de enviar.";
+        guestNameInput.focus();
+        return;
+    }
+
     isSubmittingDish = true;
     submitDishButton.disabled = true;
+    guestNameInput.disabled = true;
     dishOptions.forEach((option) => {
         option.disabled = true;
     });
@@ -234,6 +245,7 @@ dishForm.addEventListener("submit", async (event) => {
             method: "POST",
             mode: "no-cors",
             body: new URLSearchParams({
+                name: guestName,
                 dish: selectedDish.value,
                 voteId: getVoterId(),
             }),
@@ -242,6 +254,7 @@ dishForm.addEventListener("submit", async (event) => {
         markDishSubmitted("¡Gracias! Tu elección se ha enviado.");
     } catch (error) {
         console.error("No se pudo enviar la elección del plato principal.", error);
+        guestNameInput.disabled = false;
         dishOptions.forEach((option) => {
             option.disabled = false;
         });
