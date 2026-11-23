@@ -14,48 +14,52 @@
             <article class="inside" id="inside" aria-label="Interior de la invitación" inert>
                 <div class="inside-content">
                     <section class="inside-page invitation-page" id="invitation-page" aria-label="La invitación" aria-describedby="invitation-hint" tabindex="0">
-                        <span class="inside-flourish" aria-hidden="true">❦</span>
-                        <p class="inside-message">
-                            El 19 de diciembre voy a celebrar mi 90 cumpleaños
-                            y me haría muchísima ilusión compartir ese día contigo.
-                        </p>
-                        <p class="inside-message">
-                            Me han organizado una comida en el restaurante
-                            La Cartelería (calle Velázquez Moreno, 41) a las 14:00 h.
-                            Yo llegaré un poco más tarde para llevarme la sorpresa,
-                            así que, por favor, ¡no llegues tarde!
-                        </p>
-                        <span class="page-turn-hint" id="invitation-hint">Toca la tarjeta para ver el menú</span>
-                        <button class="close-button" id="close-card" type="button">Cerrar invitación</button>
+                        <div class="page-content">
+                            <span class="inside-flourish" aria-hidden="true">❦</span>
+                            <p class="inside-message">
+                                El 19 de diciembre voy a celebrar mi 90 cumpleaños
+                                y me haría muchísima ilusión compartir ese día contigo.
+                            </p>
+                            <p class="inside-message">
+                                Me han organizado una comida en el restaurante
+                                La Cartelería (calle Velázquez Moreno, 41) a las 14:00 h.
+                                Yo llegaré un poco más tarde para llevarme la sorpresa,
+                                así que, por favor, ¡no llegues tarde!
+                            </p>
+                            <span class="page-turn-hint" id="invitation-hint">Toca la tarjeta para ver el menú</span>
+                            <button class="close-button" id="close-card" type="button">Cerrar invitación</button>
+                        </div>
                     </section>
 
                     <section class="inside-page menu-page" id="menu-page" aria-labelledby="menu-title" aria-describedby="menu-hint" tabindex="0" aria-hidden="true" inert>
-                        <span class="inside-flourish" aria-hidden="true">❦</span>
-                        <p class="inside-kicker">La Cartelería</p>
-                        <h2 id="menu-title" tabindex="-1">El menú</h2>
-                        <div class="menu-course">
-                            <h3>Picoteo</h3>
-                            <p>Croquetas variadas · Empanada de atún · Zamburiñas a la plancha</p>
+                        <div class="page-content">
+                            <span class="inside-flourish" aria-hidden="true">❦</span>
+                            <p class="inside-kicker">La Cartelería</p>
+                            <h2 id="menu-title" tabindex="-1">El menú</h2>
+                            <div class="menu-course">
+                                <h3>Picoteo</h3>
+                                <p>Croquetas variadas · Empanada de atún · Zamburiñas a la plancha</p>
+                            </div>
+                            <form class="dish-form" id="dish-form">
+                                <fieldset class="dish-picker" aria-describedby="dish-feedback">
+                                    <legend>Elige tu plato principal</legend>
+                                    <label class="dish-option">
+                                        <input type="radio" name="main-dish" value="carrilleras">
+                                        <span>Carrilleras estofadas al Mencía con patatas fritas</span>
+                                    </label>
+                                    <label class="dish-option">
+                                        <input type="radio" name="main-dish" value="bacalao">
+                                        <span>Posta de bacalao al horno con patata panadera y verduras</span>
+                                    </label>
+                                </fieldset>
+                                <p class="dish-feedback" id="dish-feedback" aria-live="polite">Selecciona tu plato principal.</p>
+                                <button class="submit-button" id="submit-dish" type="submit">Enviar mi elección</button>
+                            </form>
+                            <div class="menu-course menu-extras">
+                                <p><strong>Postre:</strong> tarta San Marcos · <strong>Café</strong></p>
+                            </div>
+                            <span class="page-turn-hint" id="menu-hint">Toca la tarjeta para volver</span>
                         </div>
-                        <form class="dish-form" id="dish-form">
-                            <fieldset class="dish-picker" aria-describedby="dish-feedback">
-                                <legend>Elige tu plato principal</legend>
-                                <label class="dish-option">
-                                    <input type="radio" name="main-dish" value="carrilleras">
-                                    <span>Carrilleras estofadas al Mencía con patatas fritas</span>
-                                </label>
-                                <label class="dish-option">
-                                    <input type="radio" name="main-dish" value="bacalao">
-                                    <span>Posta de bacalao al horno con patata panadera y verduras</span>
-                                </label>
-                            </fieldset>
-                            <p class="dish-feedback" id="dish-feedback" aria-live="polite">Selecciona tu plato principal.</p>
-                            <button class="submit-button" id="submit-dish" type="submit">Enviar mi elección</button>
-                        </form>
-                        <div class="menu-course menu-extras">
-                            <p><strong>Postre:</strong> tarta San Marcos · <strong>Café</strong></p>
-                        </div>
-                        <span class="page-turn-hint" id="menu-hint">Toca la tarjeta para volver</span>
                     </section>
                 </div>
             </article>
@@ -88,6 +92,7 @@
                             <image href="img/IMG-20261114-WA0003.jpg" x="0" y="292.5" width="680" height="97.5" preserveAspectRatio="xMidYMid meet" />
                         </g>
                     </g>
+                    <text x="340" y="345" text-anchor="middle" font-family="'Vina Sans', sans-serif" font-size="390" textLength="500" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#c4a471" stroke-width="2">90</text>
                 </svg>
                 <span class="cover-rule" aria-hidden="true"></span>
                 <span class="cover-instruction">Toca para abrir</span>

@@ -90,6 +90,7 @@ button {
     overflow: visible;
     background: var(--card-green);
     opacity: 0;
+    container-type: size;
 }
 
 .inside-content {
@@ -109,7 +110,7 @@ button {
     justify-content: center;
     justify-content: safe center;
     padding: 10%;
-    overflow-y: auto;
+    overflow: hidden;
     border-radius: 2px;
     background: var(--card-green);
     box-shadow: inset 0 0 0 9px var(--card-green), inset 0 0 0 10px rgb(196 164 113 / 38%);
@@ -119,6 +120,14 @@ button {
     transition: transform var(--card-flip-duration) cubic-bezier(0.2, 0.72, 0.25, 1), box-shadow var(--card-flip-duration) ease;
     scrollbar-color: var(--gold) transparent;
     -webkit-tap-highlight-color: transparent;
+}
+
+.page-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    zoom: clamp(0.5, calc(100cqh / 560px), 1);
 }
 
 .invitation-page {
@@ -481,7 +490,7 @@ button {
 
 @media (max-width: 600px) {
     .card-scene {
-        width: min(94vw, 390px);
+        width: min(94vw, 390px, calc((100vh - 60px) * 2 / 3));
         aspect-ratio: 2 / 3;
     }
 
@@ -501,7 +510,7 @@ button {
 
 @media (max-width: 300px) {
     .card-scene {
-        width: 96vw;
+        width: min(96vw, calc((100vh - 60px) * 3 / 5));
         aspect-ratio: 3 / 5;
     }
 }
