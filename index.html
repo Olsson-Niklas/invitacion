@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5eee4">
     <title>Invitación para cumpleaños de Maria Elisa</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Invitación para cumpleaños de Maria Elisa">
+    <meta property="og:description" content="Una invitación especial para celebrar los 90 años de Elisa R. Rey.">
+    <meta property="og:url" content="https://olsson-niklas.github.io/invitacion/">
+    <meta property="og:image" content="https://olsson-niklas.github.io/invitacion/img/social-preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Portada verde de la invitación para los 90 años de Elisa R. Rey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invitación para cumpleaños de Maria Elisa">
+    <meta name="twitter:description" content="Una invitación especial para celebrar los 90 años de Elisa R. Rey.">
+    <meta name="twitter:image" content="https://olsson-niklas.github.io/invitacion/img/social-preview.png">
+    <link rel="canonical" href="https://olsson-niklas.github.io/invitacion/">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -45,12 +59,12 @@
                                 <p>Croquetas variadas · Empanada de atún · Zamburiñas a la plancha</p>
                             </div>
                             <form class="dish-form" id="dish-form">
-                                <div class="guest-name-field">
-                                    <label for="guest-name">Tu nombre</label>
-                                    <input id="guest-name" name="guestName" type="text" maxlength="100" autocomplete="name" required>
-                                </div>
                                 <fieldset class="dish-picker" aria-describedby="dish-feedback">
                                     <legend>Elige tu plato principal</legend>
+                                    <div class="guest-name-field">
+                                        <label for="guest-name">Tu nombre</label>
+                                        <input id="guest-name" name="guestName" type="text" maxlength="100" autocomplete="name" required>
+                                    </div>
                                     <label class="dish-option">
                                         <input type="radio" name="main-dish" value="carrilleras">
                                         <span>Carrilleras estofadas al Mencía con patatas fritas</span>
@@ -64,7 +78,8 @@
                                 <button class="submit-button" id="submit-dish" type="submit">Enviar mi elección</button>
                             </form>
                             <div class="menu-course menu-extras">
-                                <p><strong>Postre:</strong> tarta San Marcos · <strong>Café</strong></p>
+                                <h3>Postre</h3>
+                                <p>Tarta San Marcos · Café</p>
                             </div>
                             <span class="page-turn-hint" id="menu-hint">Toca la tarjeta para volver</span>
                         </div>
@@ -75,32 +90,31 @@
             <button class="cover" id="open-card" type="button" aria-expanded="false" aria-controls="inside">
                 <span class="cover-ornament cover-ornament-top" aria-hidden="true">✳</span>
                 <span class="cover-caption">Elisa R. Rey</span>
-                <svg class="photo-number" viewBox="0 0 680 390" role="img" aria-labelledby="number-title number-description">
+                <svg class="photo-number" viewBox="0 0 680 470" role="img" aria-labelledby="number-title number-description">
                     <title id="number-title">90</title>
                     <desc id="number-description">El número noventa formado por fotografías familiares.</desc>
                     <defs>
                         <clipPath id="number-mask">
-                            <text x="340" y="345" text-anchor="middle" font-family="'Vina Sans', sans-serif" font-size="390" textLength="500" lengthAdjust="spacingAndGlyphs">90</text>
+                            <text x="340" y="455" text-anchor="middle" font-family="'Vina Sans', sans-serif" font-size="555" textLength="712" lengthAdjust="spacingAndGlyphs">90</text>
                         </clipPath>
                     </defs>
                     <g clip-path="url(#number-mask)">
-                        <g transform="translate(0 60)">
-                            <image href="img/IMG_20261122_175315.jpg" x="0" y="0" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175309.jpg" x="170" y="0" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175303.jpg" x="340" y="0" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175259.jpg" x="510" y="0" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175253.jpg" x="0" y="97.5" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175246.jpg" x="170" y="97.5" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261122_175239.jpg" x="340" y="97.5" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG_20261114_195006.jpg" x="510" y="97.5" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG-20261114-WA0007.jpg" x="0" y="195" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG-20261114-WA0006.jpg" x="170" y="195" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG-20261114-WA0005.jpg" x="340" y="195" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG-20261114-WA0004.jpg" x="510" y="195" width="170" height="97.5" preserveAspectRatio="xMidYMin slice" />
-                            <image href="img/IMG-20261114-WA0003.jpg" x="0" y="292.5" width="680" height="97.5" preserveAspectRatio="xMidYMid meet" />
+                        <g transform="translate(0 55)">
+                            <image href="img/1.jpg" x="0" y="0" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/3.jpg" x="170" y="0" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/2.jpg" x="340" y="0" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/4.jpg" x="510" y="0" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/5.jpg" x="0" y="136.6667" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/7.jpg" x="170" y="136.6667" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/6.jpg" x="340" y="136.6667" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/8.jpg" x="510" y="136.6667" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/9.jpg" x="0" y="273.3333" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/11.jpg" x="170" y="273.3333" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/10.jpg" x="340" y="273.3333" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
+                            <image href="img/12.jpg" x="510" y="273.3333" width="170" height="136.6667" preserveAspectRatio="xMidYMid slice" />
                         </g>
                     </g>
-                    <text x="340" y="345" text-anchor="middle" font-family="'Vina Sans', sans-serif" font-size="390" textLength="500" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#c4a471" stroke-width="2">90</text>
+                    <text x="340" y="455" text-anchor="middle" font-family="'Vina Sans', sans-serif" font-size="555" textLength="712" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#c4a471" stroke-width="2">90</text>
                 </svg>
                 <span class="cover-rule" aria-hidden="true"></span>
                 <span class="cover-instruction">Toca para abrir</span>

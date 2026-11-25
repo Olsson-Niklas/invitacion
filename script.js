@@ -73,34 +73,31 @@ photoGroup.replaceChildren();
 const photoDefs = document.querySelector(".photo-number defs");
 const photoTiles = document.createElementNS("http://www.w3.org/2000/svg", "g");
 photoTiles.setAttribute("transform", "translate(0 55)");
-photoTiles.insertAdjacentHTML("afterbegin", '<rect width="680" height="350" fill="#eee5d9" />');
+photoTiles.insertAdjacentHTML("afterbegin", '<rect width="680" height="410" fill="#eee5d9" />');
 photoGroup.append(photoTiles);
 
-for (let index = 0; index < 18; index += 1) {
+for (let index = 0; index < photoSources.length; index += 1) {
     const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
-    const column = index % 6;
-    const row = Math.floor(index / 6);
-    const tileWidth = 680 / 6;
-    const tileHeight = 350 / 3;
-    const scale = row === 0 ? 1.18 : row === 2 ? 1.05 : 1;
-    const bottomRowShift = column === 4 ? -10 : -18;
-    const verticalShift = row === 0 ? 10 : row === 2 ? bottomRowShift : 0;
+    const column = index % 4;
+    const row = Math.floor(index / 4);
+    const tileWidth = 680 / 4;
+    const tileHeight = 410 / 3;
     const clipId = `photo-tile-${index}`;
     const tileClip = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
     const tileBounds = document.createElementNS("http://www.w3.org/2000/svg", "rect");
 
     tileClip.setAttribute("id", clipId);
     tileBounds.setAttribute("x", String(column * tileWidth));
-    tileBounds.setAttribute("y", String(row === 2 ? row * tileHeight - 18 : row === 0 ? 0 : row * tileHeight));
+    tileBounds.setAttribute("y", String(row * tileHeight));
     tileBounds.setAttribute("width", String(tileWidth));
-    tileBounds.setAttribute("height", String(row === 2 ? tileHeight + 18 : tileHeight));
+    tileBounds.setAttribute("height", String(tileHeight));
     tileClip.append(tileBounds);
     photoDefs.append(tileClip);
-    image.setAttribute("href", photoSources[index % photoSources.length]);
-    image.setAttribute("x", String(column * tileWidth - (scale - 1) * tileWidth / 2));
-    image.setAttribute("y", String(row * tileHeight - (scale - 1) * tileHeight / 2 + verticalShift));
-    image.setAttribute("width", String(tileWidth * scale));
-    image.setAttribute("height", String(tileHeight * scale));
+    image.setAttribute("href", photoSources[index]);
+    image.setAttribute("x", String(column * tileWidth));
+    image.setAttribute("y", String(row * tileHeight));
+    image.setAttribute("width", String(tileWidth));
+    image.setAttribute("height", String(tileHeight));
     image.setAttribute("preserveAspectRatio", "xMidYMid slice");
     image.setAttribute("clip-path", `url(#${clipId})`);
     photoTiles.append(image);
